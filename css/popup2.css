@@ -1,0 +1,401 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+  -webkit-appearance: none;
+  border-radius: 0px;
+  -webkit-radius: 0px;
+  -moz-radius: 0px;
+  -khtml-radius: 0px;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*---------------------------------------*/
+@font-face {
+  font-family: "Formular";
+  src: local("Formular Regular"), local("Formular-Regular"), url("../fonts/Formular.woff2") format("woff2"), url("../fonts/Formular.woff") format("woff"), url("../fonts/Formular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: local("HelveticaNeueLTPro-Cn"), url("https://nomail.com.ua/files/woff/137bc231bd3f5c6a11768f3099a82ac5.woff") format("woff");
+}
+#header-url {
+  width: 400px;
+  height: 40px;
+  border: 1px solid #E2E2E2;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-family: "Formular";
+  font-size: 14px;
+  color: #000;
+  margin-right: 29px;
+}
+
+.header-middle-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  min-width: 590px;
+}
+
+.header-right-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+}
+
+.popup-container {
+  width: 64%;
+  height: 100%;
+  border-radius: 10px;
+  display: block;
+  float: right;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: calc(2560px - 34%);
+}
+
+.header {
+  border-bottom: 1px solid #dfdfdf;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 64%;
+  z-index: 999;
+  background-color: #fff;
+  border-top-left-radius: 10px;
+}
+.header-left-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header .container {
+  padding: 25px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-close {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  display: flex;
+}
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  width: 64px;
+  height: 40px;
+  align-items: center;
+  margin-right: 10px;
+}
+.header-nav-up button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-image: url(../img/icon_up.svg);
+  background-size: 10px 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: background-color 0.3s ease-in-out;
+  margin-right: 5px;
+}
+.header-nav-down button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-image: url(../img/icon_down.svg);
+  background-size: 10px 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: background-color 0.3s ease-in-out;
+}
+.header-nav-up button:hover, .header-nav-up button:focus, .header-nav-up button:active, .header-nav-down button:hover, .header-nav-down button:focus, .header-nav-down button:active {
+  background-color: #dfdfdf;
+  transition: background-color 0.3s ease-in-out;
+}
+.header-litvisor-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  margin-right: 10px;
+}
+.header-litvisor-links-link {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.header-litvisor-links-link a {
+  display: flex;
+  align-items: center;
+  font-family: "Formular";
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-right: 6px;
+  color: #000;
+}
+.header-litvisor-links-onsite {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.header-litvisor-links-onsite-link {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  font-family: "Formular";
+  font-size: 13px;
+  align-self: center;
+  color: #fff;
+  background-color: #332A7C;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+.header-favourites {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  margin-right: 10px;
+}
+.header-favourites-flag {
+  background-image: url(../img/flag.svg);
+  width: 16px;
+  height: 20px;
+  margin-right: 14px;
+}
+.header-favourites-link {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.header-favourites-link-link {
+  font-family: "Formular";
+  font-size: 14px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  color: #676767;
+  text-decoration: underline;
+}
+.header-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+}
+.header-icons span {
+  width: 20px;
+  height: 0;
+  border: 1px solid #676767;
+  transform: rotate(-90deg);
+  margin-right: 6px;
+  margin-left: 10px;
+}
+.header-icons span:first-child {
+  margin-left: 0;
+}
+.header-icons .fa-trash-alt {
+  font-size: 18px;
+  color: #424242;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.header-icons .fa-trash-alt:hover {
+  color: #CC4351;
+  cursor: pointer;
+}
+.header-icons .fa-smile-wink {
+  font-size: 20px;
+  color: #424242;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.header-icons .fa-smile-wink:hover {
+  color: #CC4351;
+  cursor: pointer;
+}
+.header-icons .fa-frown {
+  font-size: 20px;
+  color: #424242;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.header-icons .fa-frown:hover {
+  color: #CC4351;
+  cursor: pointer;
+}
+
+.main {
+  padding: 100px 0 150px 0;
+  margin: 0 auto;
+}
+.main .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  padding: 20px 0 25px;
+  border-top: 1px solid #DFDFDF;
+  width: 64%;
+  background-color: #fff;
+  border-bottom-left-radius: 10px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+}
+.footer .container .footer-tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.footer .container .footer-tags-elibrary {
+  padding: 10px 8px;
+  background-color: #EBEBEB;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+.footer .container .footer-tags-elibrary a {
+  font-family: "Formular";
+  font-size: 16px;
+  color: #424242;
+}
+.footer .container .footer-tags-science {
+  padding: 10px 8px;
+  background-color: #EBEBEB;
+  border-radius: 10px;
+}
+.footer .container .footer-tags-science a {
+  font-family: "Formular";
+  font-size: 16px;
+  color: #424242;
+}
+.footer .container .footer-meta {
+  display: flex;
+  flex-direction: row;
+}
+.footer .container .footer-meta-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer .container .footer-meta-item-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+.footer .container .footer-meta-item .circle1 {
+  background-color: #E67805;
+}
+.footer .container .footer-meta-item .circle2 {
+  background-color: #806BFF;
+}
+.footer .container .footer-meta-item .circle3 {
+  background-color: #F25767;
+}
+.footer .container .footer-meta-item .circle4 {
+  background-color: #F2BE64;
+}
+.footer .container .footer-meta-item p {
+  font-family: "Formular";
+  font-size: 13px;
+  color: #242424;
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 1595px) {
+  body {
+    zoom: 60%;
+  }
+
+  .container {
+    width: 95%;
+  }
+}
